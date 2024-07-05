@@ -4,6 +4,15 @@
     font-size: 10px;
 }
 
+:root {
+    --main-title: #FFFFFF;
+    --badge-title: #5EEAD4;
+    --badge-bg: rgb(94, 234, 212, .1);
+    --grad-color-1: #246683;
+    --grad-color-2: #073145;
+    --grad-color-3: #073145;
+}
+
 body {
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -16,7 +25,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* Radial Gradient */
+    background: var(--grad-color-1);
+    background: radial-gradient(circle at 0% -50%, var(--grad-color-1) 0%, var(--grad-color-2) 50%, var(--grad-color-3) 100%);
 }
+
 
 .wrapper {
     width: 100%;
@@ -29,9 +43,21 @@ body {
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 12em;
+    color: var(--main-title)
 }
 
 span.badge {
-    font-size: 2em;
+    font-size: 4em;
+    color: var(--badge-title);
+
+    /* Badge Background */
+    background-color: var(--badge-bg);
+    width: 12em;
+    padding: .5em;    
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+
 }
