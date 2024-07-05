@@ -42,6 +42,11 @@ body {
     align-items: center;
 }
 
+img {
+    width: 30em;
+    height: auto;
+}
+
 h1 {
     font-size: 12em;
     color: var(--main-title)
