@@ -35,6 +35,7 @@ body {
 .wrapper {
     width: 100%;
     height: auto;
+    max-width: 630px;
 
     display: flex;
     flex-flow: column wrap;
@@ -43,22 +44,23 @@ body {
 }
 
 img {
-    width: 30em;
+    width: 47.7%;
     height: auto;
 }
 
 h1 {
-    font-size: 12em;
-    color: var(--main-title)
+    font-size: clamp(6rem, -2.0000rem + 22.2222vw, 12rem);
+    color: var(--main-title);
+    align-self: center;
 }
-
+/* Scale font-size based on this explanation: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
 span.badge {
-    font-size: 4em;
+    font-size: clamp(2.25rem, -0.0833rem + 6.4815vw, 4rem);
     color: var(--badge-title);
 
     /* Badge Background */
     background-color: var(--badge-bg);
-    width: 12em;
+    width: min(12em, 65%);
     padding: .5em;    
     border-radius: 100px;
 
